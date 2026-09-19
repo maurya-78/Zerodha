@@ -6,56 +6,64 @@ function Footer() {
       <div className="container border-top mt-5">
         <div className="row mt-5">
           <div className="col">
-            <img src="media/images/logo.svg" style={{ width: "50%" }} />
+            <img
+              src="media/images/logo.svg"
+              alt="Zerodha Logo"
+              style={{ width: "50%" }}
+            />
             <p>
               &copy; 2026 - 2036, Not Zerodha Broking Ltd. All rights reserved.
             </p>
           </div>
+
           <div className="col">
             <p>Company</p>
-            <a href="">About</a>
+            <span>About</span>
             <br />
-            <a href="">Products</a>
+            <span>Products</span>
             <br />
-            <a href="">Pricing</a>
+            <span>Pricing</span>
             <br />
-            <a href="">Referral programme</a>
+            <span>Referral programme</span>
             <br />
-            <a href="">Careers</a>
+            <span>Careers</span>
             <br />
-            <a href="">Zerodha.tech</a>
+            <span>Zerodha.tech</span>
             <br />
-            <a href="">Press & media</a>
+            <span>Press & media</span>
             <br />
-            <a href="">Zerodha cares (CSR)</a>
+            <span>Zerodha cares (CSR)</span>
             <br />
           </div>
+
           <div className="col">
             <p>Support</p>
-            <a href="">Contact</a>
+            <span>Contact</span>
             <br />
-            <a href="">Support portal</a>
+            <span>Support portal</span>
             <br />
-            <a href="">Z-Connect blog</a>
+            <span>Z-Connect blog</span>
             <br />
-            <a href="">List of charges</a>
+            <span>List of charges</span>
             <br />
-            <a href="">Downloads & resources</a>
+            <span>Downloads & resources</span>
             <br />
           </div>
+
           <div className="col">
             <p>Account</p>
-            <a href="">Open an account</a>
+            <span>Open an account</span>
             <br />
-            <a href="">Fund transfer</a>
+            <span>Fund transfer</span>
             <br />
-            <a href="">60 day challenge</a>
+            <span>60 day challenge</span>
             <br />
           </div>
         </div>
+
         <div className="mt-5 text-muted" style={{ fontSize: "14px" }}>
           <p>
-            Zerodha Broking Ltd.: Member of NSE​ &​ BSE – SEBI Registration no.:
+            Zerodha Broking Ltd.: Member of NSE & BSE – SEBI Registration no.:
             INZ000031633 CDSL: Depository services through Zerodha Securities
             Pvt. Ltd. – SEBI Registration no.: IN-DP-100-2015 Commodity Trading
             through Zerodha Commodities Pvt. Ltd. MCX: 46025 – SEBI Registration

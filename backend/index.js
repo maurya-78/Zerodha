@@ -2,24 +2,144 @@ require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const { HoldingsModel } = require("./model/HoldingsModel");
-
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
+const { UserModel } = require("./model/UserModel");
 
 const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
 
 const app = express();
 
-app.use(cors());
-app.use(bodyParser.json());
+// =========================
+// MIDDLEWARE
+// =========================
+
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
+
+app.use(express.json());
+
+// =========================
+// TEST ROUTE
+// =========================
+
+app.get("/", (req, res) => {
+  res.json({
+    message: "Zerodha backend is running",
+  });
+});
+
+// =========================
+// SIGNUP
+// =========================
+
+app.post("/signup", async (req, res) => {
+  try {
+    const { fullName, email, mobile, password } = req.body;
+
+    if (!fullName || !email || !mobile || !password) {
+      return res.status(400).json({
+        success: false,
+        message: "All fields are required",
+      });
+    }
+
+    const existingUser = await UserModel.findOne({ email });
+
+    if (existingUser) {
+      return res.status(409).json({
+        success: false,
+        message: "User already exists with this email",
+      });
+    }
+
+    const newUser = new UserModel({
+      fullName,
+      email,
+      mobile,
+      password,
+    });
+
+    await newUser.save();
+
+    res.status(201).json({
+      success: true,
+      message: "Signup successful",
+    });
+  } catch (error) {
+    console.error("Signup Error:", error);
+
+    res.status(500).json({
+      success: false,
+      message: "Signup failed",
+    });
+  }
+});
+
+// =========================
+// LOGIN
+// =========================
+
+app.post("/login", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+      return res.status(400).json({
+        success: false,
+        message: "Email and password are required",
+      });
+    }
+
+    const user = await UserModel.findOne({ email });
+
+    if (!user) {
+      return res.status(401).json({
+        success: false,
+        message: "User not found",
+      });
+    }
+
+    if (user.password !== password) {
+      return res.status(401).json({
+        success: false,
+        message: "Invalid email or password",
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      message: "Login successful",
+      user: {
+        id: user._id,
+        fullName: user.fullName,
+        email: user.email,
+        mobile: user.mobile,
+      },
+    });
+  } catch (error) {
+    console.error("Login Error:", error);
+
+    res.status(500).json({
+      success: false,
+      message: "Login failed",
+    });
+  }
+});
+
+// =========================
+// ADD HOLDINGS
+// =========================
 
 app.get("/addHoldings", async (req, res) => {
-  let tempHoldings = [
+  const tempHoldings = [
     {
       name: "BHARTIARTL",
       qty: 2,
@@ -56,7 +176,7 @@ app.get("/addHoldings", async (req, res) => {
     {
       name: "ITC",
       qty: 5,
-      avg: 202.0,
+      avg: 202,
       price: 207.9,
       net: "+2.92%",
       day: "+0.80%",
@@ -98,8 +218,8 @@ app.get("/addHoldings", async (req, res) => {
     {
       name: "SGBMAY29",
       qty: 2,
-      avg: 4727.0,
-      price: 4719.0,
+      avg: 4727,
+      price: 4719,
       net: "-0.17%",
       day: "+0.15%",
     },
@@ -131,23 +251,31 @@ app.get("/addHoldings", async (req, res) => {
     },
   ];
 
-  tempHoldings.forEach((item) => {
-    let newHolding = new HoldingsModel({
-      name: item.name,
-      qty: item.qty,
-      avg: item.avg,
-      price: item.price,
-      net: item.day,
-      day: item.day,
-    });
+  try {
+    for (const item of tempHoldings) {
+      await HoldingsModel.create(item);
+    }
 
-    newHolding.save();
-  });
-  res.send("Done!");
+    res.json({
+      success: true,
+      message: "Holdings added successfully",
+    });
+  } catch (error) {
+    console.error(error);
+
+    res.status(500).json({
+      success: false,
+      message: "Error adding holdings",
+    });
+  }
 });
 
+// =========================
+// ADD POSITIONS
+// =========================
+
 app.get("/addPositions", async (req, res) => {
-  let tempPositions = [
+  const tempPositions = [
     {
       product: "CNC",
       name: "EVEREADY",
@@ -170,48 +298,126 @@ app.get("/addPositions", async (req, res) => {
     },
   ];
 
-  tempPositions.forEach((item) => {
-    let newPosition = new PositionsModel({
-      product: item.product,
-      name: item.name,
-      qty: item.qty,
-      avg: item.avg,
-      price: item.price,
-      net: item.net,
-      day: item.day,
-      isLoss: item.isLoss,
-    });
+  try {
+    for (const item of tempPositions) {
+      await PositionsModel.create(item);
+    }
 
-    newPosition.save();
-  });
-  res.send("Done!");
+    res.json({
+      success: true,
+      message: "Positions added successfully",
+    });
+  } catch (error) {
+    console.error(error);
+
+    res.status(500).json({
+      success: false,
+      message: "Error adding positions",
+    });
+  }
 });
+
+// =========================
+// GET HOLDINGS
+// =========================
 
 app.get("/allHoldings", async (req, res) => {
-  let allHoldings = await HoldingsModel.find({});
-  res.json(allHoldings);
+  try {
+    const allHoldings = await HoldingsModel.find({});
+    res.json(allHoldings);
+  } catch (error) {
+    console.error(error);
+
+    res.status(500).json({
+      success: false,
+      message: "Failed to fetch holdings",
+    });
+  }
 });
+
+// =========================
+// GET POSITIONS
+// =========================
 
 app.get("/allPositions", async (req, res) => {
-  let allPositions = await PositionsModel.find({});
-  res.json(allPositions);
+  try {
+    const allPositions = await PositionsModel.find({});
+    res.json(allPositions);
+  } catch (error) {
+    console.error(error);
+
+    res.status(500).json({
+      success: false,
+      message: "Failed to fetch positions",
+    });
+  }
 });
+
+// =========================
+// CREATE ORDER
+// =========================
 
 app.post("/newOrder", async (req, res) => {
-  let newOrder = new OrdersModel({
-    name: req.body.name,
-    qty: req.body.qty,
-    price: req.body.price,
-    mode: req.body.mode,
-  });
+  try {
+    const { name, qty, price, mode } = req.body;
 
-  newOrder.save();
+    const newOrder = new OrdersModel({
+      name,
+      qty,
+      price,
+      mode,
+    });
 
-  res.send("Order saved!");
+    await newOrder.save();
+
+    res.json({
+      success: true,
+      message: "Order saved successfully",
+    });
+  } catch (error) {
+    console.error(error);
+
+    res.status(500).json({
+      success: false,
+      message: "Failed to save order",
+    });
+  }
 });
 
-app.listen(PORT, () => {
-  console.log("App started!");
-  mongoose.connect(uri);
-  console.log("DB started!");
+// =========================
+// GET ORDERS
+// =========================
+
+app.get("/allOrders", async (req, res) => {
+  try {
+    const allOrders = await OrdersModel.find({});
+    res.json(allOrders);
+  } catch (error) {
+    console.error(error);
+
+    res.status(500).json({
+      success: false,
+      message: "Failed to fetch orders",
+    });
+  }
 });
+
+// =========================
+// START SERVER
+// =========================
+
+async function startServer() {
+  try {
+    await mongoose.connect(uri);
+
+    console.log("MongoDB connected successfully");
+
+    app.listen(PORT, () => {
+      console.log(`Backend running on http://localhost:${PORT}`);
+    });
+  } catch (error) {
+    console.error("MongoDB connection error:", error);
+  }
+}
+
+startServer();

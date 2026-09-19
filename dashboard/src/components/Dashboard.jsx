@@ -1,15 +1,15 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import Apps from "./Apps";
-import Funds from "./Funds";
-import Holdings from "./Holdings";
+import Apps from "./Apps.jsx";
+import Funds from "./Funds.jsx";
+import Holdings from "./Holdings.jsx";
 
-import Orders from "./Orders";
-import Positions from "./Positions";
-import Summary from "./Summary";
-import WatchList from "./WatchList";
-import { GeneralContextProvider } from "./GeneralContext";
+import Orders from "./Orders.jsx";
+import Positions from "./Positions.jsx";
+import Summary from "./Summary.jsx";
+import WatchList from "./WatchList.jsx";
+import { GeneralContextProvider } from "./GeneralContext.jsx";
 
 const Dashboard = () => {
   return (

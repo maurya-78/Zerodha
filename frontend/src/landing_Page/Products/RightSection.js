@@ -7,12 +7,14 @@ function RightSection({ imageURL, productName, productDesription, learnMore }) {
         <div className="col-6 p-5 mt-5">
           <h1>{productName}</h1>
           <p>{productDesription}</p>
+
           <div>
             <a href={learnMore}>Learn More</a>
           </div>
         </div>
+
         <div className="col-6">
-          <img src={imageURL} />
+          <img src={imageURL} alt={productName} />
         </div>
       </div>
     </div>

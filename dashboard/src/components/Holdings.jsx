@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios, { all } from "axios";
-import { VerticalGraph } from "./VerticalGraph";
+import { VerticalGraph } from "./VerticalGraph.jsx";
 
 // import { holdings } from "../data/data";
 
