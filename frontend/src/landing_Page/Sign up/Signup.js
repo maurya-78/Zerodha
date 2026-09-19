@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -19,13 +22,16 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://zerodha-backend-ij1l.onrender.com/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://zerodha-backend-ij1l.onrender.com/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
 
@@ -39,7 +45,7 @@ function Signup() {
           password: "",
         });
 
-        window.location.href = "/login";
+        navigate("/login");
       } else {
         alert(data.message);
       }
