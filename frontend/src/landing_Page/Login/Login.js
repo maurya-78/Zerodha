@@ -41,7 +41,7 @@ function Login() {
 
       alert("Login successful!");
 
-      window.location.href = `http://localhost:5173/?user=${user}`;
+      window.location.href = `https://zerodha-dashboard-c76f.onrender.com/?user=${user}`;
     } catch (error) {
       console.error("Login error:", error);
       alert("Backend server se connection nahi ho raha.");
