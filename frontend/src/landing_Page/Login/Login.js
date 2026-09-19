@@ -20,7 +20,7 @@ function Login() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3002/login", {
+      const response = await fetch("https://zerodha-backend-ij1l.onrender.com/login",{
         method: "POST",
         headers: {
           "Content-Type": "application/json",
