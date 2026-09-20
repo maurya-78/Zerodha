@@ -74,6 +74,7 @@ function Universe() {
         <button
           className="p-2 btn btn-primary fs-5 mb-5"
           style={{ width: "20%", margin: "0 auto" }}
+          onClick={() => (window.location.href = "/signup")}
         >
           Signup Now
         </button>
