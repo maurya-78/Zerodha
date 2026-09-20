@@ -1,4 +1,4 @@
-# Finora Clone - Dashboard
+# Finora - Stock Trading & Investment Platform - Dashboard
 
 A React-based trading dashboard for the Finora-inspired trading platform.
 
