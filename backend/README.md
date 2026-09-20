@@ -1,4 +1,4 @@
-# Finora Clone - Backend
+# Finora - Stock Trading & Investment Platform - Backend
 
 Backend service for the Finora-inspired trading platform.
 
