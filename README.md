@@ -1,4 +1,4 @@
-# Finora Clone
+# Finora - Stock Trading & Investment Platform
 
 A full-stack Finora-inspired trading platform developed as an educational and portfolio project.
 
