@@ -1,6 +1,6 @@
-# Zerodha Clone
+# Finora Clone
 
-A full-stack Zerodha-inspired trading platform developed as an educational and portfolio project.
+A full-stack Finora-inspired trading platform developed as an educational and portfolio project.
 
 The project is divided into three independent applications:
 
@@ -15,7 +15,7 @@ The project is divided into three independent applications:
 The application provides a complete flow from the public landing website to authentication and the user trading dashboard.
 
 ```text
-                         Zerodha Clone
+                         Finora Clone
                               │
              ┌────────────────┼────────────────┐
              │                │                │
@@ -147,7 +147,7 @@ dashboard/
 # Complete Project Structure
 
 ```text
-Zerodha_clone/
+Finora_clone/
 │
 ├── frontend/
 │   │
@@ -565,7 +565,7 @@ git clone <your-repository-url>
 Move into the project:
 
 ```bash
-cd Zerodha_clone
+cd Finora_clone
 ```
 
 Install dependencies separately for each application.
@@ -777,7 +777,7 @@ Possible future improvements:
 
 This is an educational and portfolio project inspired by the concept of an online trading platform.
 
-It is not the official Zerodha application and is not intended for real-money trading.
+It is not the official Finora application and is not intended for real-money trading.
 
 ---
 
@@ -790,3 +790,5 @@ It is not the official Zerodha application and is not intended for real-money tr
 # License
 
 This project is created for educational and portfolio purposes.
+
+

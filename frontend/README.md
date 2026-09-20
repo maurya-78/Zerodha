@@ -1,6 +1,6 @@
-# Zerodha Clone - Frontend
+# Finora Clone - Frontend
 
-A React-based frontend for a Zerodha-inspired trading platform. This application contains the public landing pages, product information, pricing, support section, authentication pages, and account-opening flow.
+A React-based frontend for a Finora-inspired trading platform. This application contains the public landing pages, product information, pricing, support section, authentication pages, and account-opening flow.
 
 ---
 
@@ -611,9 +611,9 @@ Possible improvements include:
 
 ## Disclaimer
 
-This project is a Zerodha-inspired educational project created for learning and portfolio purposes.
+This project is a Finora-inspired educational project created for learning and portfolio purposes.
 
-It is not the official Zerodha application and is not intended for real-money trading.
+It is not the official Finora application and is not intended for real-money trading.
 
 ---
 
@@ -626,3 +626,4 @@ It is not the official Zerodha application and is not intended for real-money tr
 ## License
 
 This project is intended for educational and portfolio purposes.
+

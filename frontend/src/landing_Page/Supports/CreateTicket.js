@@ -33,11 +33,11 @@ function CreateTicket() {
           <span style={{ lineHeight: "2.5" }}>NRI Account Opening</span>
           <br />
 
-          <span style={{ lineHeight: "2.5" }}>Charges at Zerodha</span>
+          <span style={{ lineHeight: "2.5" }}>Charges at Finora</span>
           <br />
 
           <span style={{ lineHeight: "2.5" }}>
-            Zerodha IDFC FIRST Bank 3-in-1 Account
+            Finora IDFC FIRST Bank 3-in-1 Account
           </span>
           <br />
 
@@ -63,10 +63,10 @@ function CreateTicket() {
           <br />
           <span style={{ lineHeight: "2.5" }}>NRI Account Opening</span>
           <br />
-          <span style={{ lineHeight: "2.5" }}>Charges at Zerodha</span>
+          <span style={{ lineHeight: "2.5" }}>Charges at Finora</span>
           <br />
           <span style={{ lineHeight: "2.5" }}>
-            Zerodha IDFC FIRST Bank 3-in-1 Account
+            Finora IDFC FIRST Bank 3-in-1 Account
           </span>
           <br />
           <span style={{ lineHeight: "2.5" }}>Getting Started</span>
@@ -91,10 +91,10 @@ function CreateTicket() {
           <br />
           <span style={{ lineHeight: "2.5" }}>NRI Account Opening</span>
           <br />
-          <span style={{ lineHeight: "2.5" }}>Charges at Zerodha</span>
+          <span style={{ lineHeight: "2.5" }}>Charges at Finora</span>
           <br />
           <span style={{ lineHeight: "2.5" }}>
-            Zerodha IDFC FIRST Bank 3-in-1 Account
+            Finora IDFC FIRST Bank 3-in-1 Account
           </span>
           <br />
           <span style={{ lineHeight: "2.5" }}>Getting Started</span>
@@ -119,10 +119,10 @@ function CreateTicket() {
           <br />
           <span style={{ lineHeight: "2.5" }}>NRI Account Opening</span>
           <br />
-          <span style={{ lineHeight: "2.5" }}>Charges at Zerodha</span>
+          <span style={{ lineHeight: "2.5" }}>Charges at Finora</span>
           <br />
           <span style={{ lineHeight: "2.5" }}>
-            Zerodha IDFC FIRST Bank 3-in-1 Account
+            Finora IDFC FIRST Bank 3-in-1 Account
           </span>
           <br />
           <span style={{ lineHeight: "2.5" }}>Getting Started</span>
@@ -147,10 +147,10 @@ function CreateTicket() {
           <br />
           <span style={{ lineHeight: "2.5" }}>NRI Account Opening</span>
           <br />
-          <span style={{ lineHeight: "2.5" }}>Charges at Zerodha</span>
+          <span style={{ lineHeight: "2.5" }}>Charges at Finora</span>
           <br />
           <span style={{ lineHeight: "2.5" }}>
-            Zerodha IDFC FIRST Bank 3-in-1 Account
+            Finora IDFC FIRST Bank 3-in-1 Account
           </span>
           <br />
           <span style={{ lineHeight: "2.5" }}>Getting Started</span>
@@ -175,10 +175,10 @@ function CreateTicket() {
           <br />
           <span style={{ lineHeight: "2.5" }}>NRI Account Opening</span>
           <br />
-          <span style={{ lineHeight: "2.5" }}>Charges at Zerodha</span>
+          <span style={{ lineHeight: "2.5" }}>Charges at Finora</span>
           <br />
           <span style={{ lineHeight: "2.5" }}>
-            Zerodha IDFC FIRST Bank 3-in-1 Account
+            Finora IDFC FIRST Bank 3-in-1 Account
           </span>
           <br />
           <span style={{ lineHeight: "2.5" }}>Getting Started</span>

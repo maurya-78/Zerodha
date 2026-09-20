@@ -51,14 +51,14 @@ const Menu = () => {
     localStorage.removeItem("user");
     localStorage.removeItem("isLoggedIn");
 
-    window.location.href = "https://zerodha-hc5c.onrender.com";
+    window.location.href = "https://Finora-hc5c.onrender.com";
   };
 
   return (
     <div className="menu-container">
       <div className="menu-left">
-        <Link to="/" className="zerodha-logo">
-          <img src="/logo.png" alt="Zerodha" />
+        <Link to="/" className="Finora-logo">
+          <img src="/logo.png" alt="Finora" />
         </Link>
       </div>
 

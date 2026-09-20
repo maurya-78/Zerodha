@@ -1,6 +1,6 @@
-# Zerodha Clone - Dashboard
+# Finora Clone - Dashboard
 
-A React-based trading dashboard for the Zerodha-inspired trading platform.
+A React-based trading dashboard for the Finora-inspired trading platform.
 
 The dashboard provides a trading-style interface where authenticated users can view their market watchlist, orders, holdings, positions, funds, applications, charts, and user information.
 
@@ -449,7 +449,7 @@ The logged-in user's information is used inside the dashboard to display the use
 The complete application is divided into three major parts:
 
 ```text
-                    Zerodha Clone
+                    Finora Clone
                          │
           ┌──────────────┼──────────────┐
           │              │              │
@@ -747,9 +747,9 @@ Possible future improvements include:
 
 # Disclaimer
 
-This project is a Zerodha-inspired educational project created for learning and portfolio purposes.
+This project is a Finora-inspired educational project created for learning and portfolio purposes.
 
-It is not the official Zerodha application and is not intended for real-money trading.
+It is not the official Finora application and is not intended for real-money trading.
 
 ---
 
@@ -762,3 +762,4 @@ It is not the official Zerodha application and is not intended for real-money tr
 # License
 
 This project is intended for educational and portfolio purposes.
+

@@ -23,7 +23,7 @@ function PricingPage() {
       <RightSection
         imageURL="media/images/console.png"
         productName="Console"
-        productDesription="The central dashboard for your Zerodha account. Gain insights into your trades and investments with in-depth reports and visualisations."
+        productDesription="The central dashboard for your Finora account. Gain insights into your trades and investments with in-depth reports and visualisations."
         learnMore=""
       />
 
@@ -55,7 +55,7 @@ function PricingPage() {
       />
 
       <p className="text-center mt-5 mb-5">
-        Want to know more about our technology stack? Check out the Zerodha.tech
+        Want to know more about our technology stack? Check out the Finora.tech
         blog.
       </p>
 

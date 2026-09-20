@@ -1,6 +1,6 @@
-# Zerodha Clone - Backend
+# Finora Clone - Backend
 
-Backend service for the Zerodha-inspired trading platform.
+Backend service for the Finora-inspired trading platform.
 
 This backend provides authentication, user management, database connectivity, API handling, password security, JWT-based authentication, and real-time communication required by the frontend and dashboard applications.
 
@@ -8,10 +8,10 @@ This backend provides authentication, user management, database connectivity, AP
 
 ## Project Overview
 
-The complete Zerodha Clone project is divided into three major applications:
+The complete Finora Clone project is divided into three major applications:
 
 ```text
-Zerodha Clone
+Finora Clone
 │
 ├── frontend
 │   └── Landing Page & Authentication UI
@@ -481,7 +481,7 @@ Frontend
 The complete application works approximately like this:
 
 ```text
-                    Zerodha Clone
+                    Finora Clone
                          │
           ┌──────────────┼──────────────┐
           │              │              │
@@ -695,9 +695,9 @@ Possible future improvements include:
 
 # Disclaimer
 
-This project is a Zerodha-inspired educational and portfolio project.
+This project is a Finora-inspired educational and portfolio project.
 
-It is not the official Zerodha application and is not intended for real-money trading.
+It is not the official Finora application and is not intended for real-money trading.
 
 ---
 
@@ -710,3 +710,4 @@ It is not the official Zerodha application and is not intended for real-money tr
 # License
 
 This project is created for educational and portfolio purposes.
+

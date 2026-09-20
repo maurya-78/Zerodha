@@ -863,13 +863,13 @@ hr {
   align-items: center;
 }
 
-.zerodha-logo {
+.Finora-logo {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
-.zerodha-logo img {
+.Finora-logo img {
   width: 135px;
   height: auto;
   display: block;
@@ -1048,7 +1048,7 @@ hr {
 }
 
 @media (max-width: 850px) {
-  .zerodha-logo img {
+  .Finora-logo img {
     width: 110px;
   }
 

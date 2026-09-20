@@ -33,7 +33,7 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   res.json({
-    message: "Zerodha backend is running",
+    message: "Finora backend is running",
   });
 });
 

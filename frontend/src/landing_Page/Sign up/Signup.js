@@ -23,7 +23,7 @@ function Signup() {
 
     try {
       const response = await fetch(
-        "https://zerodha-backend-ij1l.onrender.com/signup",
+        "https://Finora-backend-ij1l.onrender.com/signup",
         {
           method: "POST",
           headers: {

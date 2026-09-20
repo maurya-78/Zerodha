@@ -9,7 +9,7 @@ function Stats() {
 
           <h2 className="fs-4">Customer-first always</h2>
           <p className="text-muted">
-            That's why 1.3+ crore customers trust Zerodha with ₹3.5+ lakh crores
+            That's why 1.3+ crore customers trust Finora with ₹3.5+ lakh crores
             worth of equity investments.
           </p>
 
@@ -19,7 +19,7 @@ function Stats() {
             High quality apps that you use at your pace, the way you like.
           </p>
 
-          <h2 className="fs-4">The Zerodha universe</h2>
+          <h2 className="fs-4">The Finora universe</h2>
           <p className="text-muted">
             Not just an app, but a whole ecosystem. Our investments in 30+
             fintech startups offer you tailored services specific to your needs.
@@ -36,7 +36,7 @@ function Stats() {
         <div className="col-6 p-5">
           <img
             src="media/images/ecosystem.png"
-            alt="Zerodha ecosystem"
+            alt="Finora ecosystem"
             style={{ width: "90%" }}
           />
 
