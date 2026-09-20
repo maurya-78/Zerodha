@@ -51,7 +51,7 @@ const Menu = () => {
     localStorage.removeItem("user");
     localStorage.removeItem("isLoggedIn");
 
-    window.location.href = "http://localhost:3000";
+    window.location.href = "https://zerodha-hc5c.onrender.com";
   };
 
   return (
