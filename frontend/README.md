@@ -1,4 +1,4 @@
-# Finora Clone - Frontend
+# Finora - Stock Trading & Investment Platform - Frontend
 
 A React-based frontend for a Finora-inspired trading platform. This application contains the public landing pages, product information, pricing, support section, authentication pages, and account-opening flow.
 
