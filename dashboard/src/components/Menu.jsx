@@ -51,14 +51,18 @@ const Menu = () => {
     localStorage.removeItem("user");
     localStorage.removeItem("isLoggedIn");
 
-    window.location.href = "https://Finora-hc5c.onrender.com";
+    window.location.href = "https://zerodha.onrender.com";
   };
 
   return (
     <div className="menu-container">
       <div className="menu-left">
         <Link to="/" className="Finora-logo">
-          <img src="/logo.png" alt="Finora" />
+         <img
+              src="/logo.svg"
+              alt="Finora Logo"
+              style={{ width: "50%" }}
+            />
         </Link>
       </div>
 
