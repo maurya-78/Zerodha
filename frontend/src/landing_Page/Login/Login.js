@@ -20,7 +20,7 @@ function Login() {
     setLoading(true);
 
     try {
-      const response = await fetch("https://Finora-backend-ij1l.onrender.com/login",{
+      const response = await fetch("https://zerodha-backend-ij1l.onrender.com/login",{
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -41,10 +41,10 @@ function Login() {
 
       alert("Login successful!");
 
-      window.location.href = `https://Finora-dashboard-c76f.onrender.com/?user=${user}`;
+      window.location.href = `https://zerodha-dashboard-c76f.onrender.com/?user=${user}`;
     } catch (error) {
       console.error("Login error:", error);
-      alert("Backend server se connection nahi ho raha.");
+      alert("Backend server connection failed. Please try again later.");
     } finally {
       setLoading(false);
     }
